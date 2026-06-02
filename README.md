@@ -1,8 +1,18 @@
 # REimage
 
-REimage is a local Python runner for CodeFormer. It is intended for users who want to process images on their own machine without queue systems, remote timeouts, or artificial batch limits. Actual speed and stability depend on your hardware, drivers, Python environment, and available GPU memory.
+REimage is a local Python runner for CodeFormer. It is intended for users who want to process images on their own machine without queue systems, remote timeouts, paid cloud platforms, or artificial batch limits. Actual speed and stability depend on your hardware, drivers, Python environment, and available GPU memory.
 
-This repository is not the original CodeFormer model and the original CodeFormer project was not created by me. The original project belongs to its authors, including sczhou and contributors:
+## Goal
+
+The main goal of REimage is to make CodeFormer easier to run in a real local Python environment.
+
+Instead of depending on online demos, limited web interfaces, queues, upload restrictions, or paid cloud services, REimage provides a simple local workflow that users can run directly on their own computer. The project reuses the original CodeFormer technology, but adds a practical Python-based execution structure focused on local use, batch processing, and reproducibility.
+
+In simple terms, REimage exists to make CodeFormer easier to install, execute, and use locally for real image restoration workflows.
+
+## Based on CodeFormer
+
+This repository is not the original CodeFormer model, and the original CodeFormer project was not created by me. The original project belongs to its authors, including sczhou and contributors:
 
 https://github.com/sczhou/CodeFormer
 
@@ -10,20 +20,21 @@ The original CodeFormer source code, model files, and related assets keep their 
 
 ## What Is Included
 
-- A local `main.py` runner.
-- The original `CodeFormer/` project folder.
-- Installation notes for a local Python environment.
-- Empty tracked folders for user uploads and generated results.
+* A local `main.py` runner.
+* The original `CodeFormer/` project folder.
+* Installation notes for a local Python environment.
+* Empty tracked folders for user uploads and generated results.
+* A simple workflow for running restoration locally.
 
 ## What Is Not Included
 
 REimage intentionally does not include:
 
-- Personal user images.
-- Generated results.
-- Virtual environments.
-- ZIP, RAR, 7z, TAR, or GZ archives.
-- Model weights, checkpoints, `.pth`, `.pt`, `.ckpt`, or `.safetensors` files.
+* Personal user images.
+* Generated results.
+* Virtual environments.
+* ZIP, RAR, 7z, TAR, or GZ archives.
+* Model weights, checkpoints, `.pth`, `.pt`, `.ckpt`, or `.safetensors` files.
 
 These files are ignored by Git because they are private, generated, environment-specific, or too large for a clean public repository.
 
@@ -41,7 +52,7 @@ For GPU acceleration on Windows, the installation commands use PyTorch with CUDA
 
 Open a terminal in the repository root and follow the commands in:
 
-```powershell
+```txt
 install_commands.txt
 ```
 
@@ -62,7 +73,7 @@ python -m pip install numpy==1.26.4 --force-reinstall
 
 Put your input images here:
 
-```text
+```txt
 CodeFormer/inputs/user_upload/
 ```
 
@@ -74,13 +85,13 @@ python main.py
 
 Generated results are saved here:
 
-```text
+```txt
 CodeFormer/results/
 ```
 
 ## Project Structure
 
-```text
+```txt
 REimage/
 |-- CodeFormer/
 |   |-- basicsr/
