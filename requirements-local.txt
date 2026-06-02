@@ -1,0 +1,17 @@
+numpy==1.26.4
+facexlib
+gfpgan
+realesrgan
+addict
+future
+lmdb
+opencv-python
+Pillow
+pyyaml
+requests
+scikit-image
+scipy
+tqdm
+yapf
+lpips
+gdown

@@ -1,0 +1,39 @@
+# Installation commands for REimage
+
+# Recommended interpreter: Python 3.11
+
+# 1. Create virtual environment
+
+python -m venv .venv
+
+# 2. Activate virtual environment on Windows PowerShell
+
+.\.venv\Scripts\Activate.ps1
+
+# 3. Upgrade pip tools
+
+python -m pip install --upgrade pip setuptools wheel
+
+# 4. Install PyTorch with CUDA 12.1
+
+python -m pip install torch==2.1.0 torchvision==0.16.0 --index-url https://download.pytorch.org/whl/cu121
+
+# 5. Install compatible NumPy
+
+python -m pip install numpy==1.26.4
+
+# 6. Install BasicSR without dependencies to avoid NumPy conflicts
+
+python -m pip install basicsr==1.4.2 --no-deps
+
+# 7. Install remaining dependencies
+
+python -m pip install facexlib gfpgan realesrgan addict future lmdb opencv-python Pillow pyyaml requests scikit-image scipy tqdm yapf lpips gdown
+
+# 8. Force NumPy back to 1.26.4 because facexlib may pull NumPy 2.x
+
+python -m pip install numpy==1.26.4 --force-reinstall
+
+# 9. Run the local script
+
+python main.py

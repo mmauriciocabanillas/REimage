@@ -1,0 +1,66 @@
+# Python cache
+
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+
+.venv/
+venv/
+env/
+
+# IDE
+
+.idea/
+.vscode/
+
+# User uploads
+
+CodeFormer/inputs/user_upload/*
+!CodeFormer/inputs/user_upload/.gitkeep
+
+# Generated results
+
+CodeFormer/results/*
+!CodeFormer/results/.gitkeep
+
+results/
+outputs/
+output/
+inputs/
+input_images/
+user_upload/
+
+# Heavy archives
+
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Model weights / checkpoints
+
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+CodeFormer/weights/
+CodeFormer/experiments/pretrained_models/
+
+# Logs
+
+*.log
+logs/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+desktop.ini
